@@ -71,3 +71,20 @@ connectDB()
 //moongoose is schema focussed meaning with lesser bugs and erros and maintaining data consistency
 //js is asynchronus by default that means it does not wait for the function to run instead it continues with the rest of the apppliaction and comes back to the function when the task is completed
 //aysnc and await are used to make sure that a function would return a promise in future async is applied on the funtion and await acutally is used to return the promises
+
+//for various applications like aws and deplyment tools , to enable them to know whether our backend is alive or not we make use of health check api
+
+
+// index.js
+//    ↓
+// app.js
+//    ↓
+// routes
+//    ↓
+// controller
+//    ↓
+// utils (ApiResponse)
+//    ↓
+// res.json()
+//    ↓
+// CLIENT

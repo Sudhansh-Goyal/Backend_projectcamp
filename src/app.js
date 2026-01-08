@@ -1,6 +1,7 @@
 import express from "express"
 import cors from "cors"
 
+
 const app =express()
 
 
@@ -14,6 +15,10 @@ app.use(cors({
     methods : ["GET","PUT","POST","PATCH","DELETE" ,"OPTIONS"],
     allowedHeaders : ["Content-type","Authorization"],
 }))
+
+//import routes
+import healthcheckRouter from './routes/healthcheck.routes.js'
+app.use("/api/v1/healthcheck",healthcheckRouter)
 
 app.get("/",(req,res) =>{
      res.send("hello world");
