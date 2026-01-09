@@ -88,3 +88,19 @@ connectDB()
 // res.json()
 //    ↓
 // CLIENT
+
+
+//async handler is a wrapper that is used that catches assync errors meaning it will check if the function failed to remvoe the promise or not
+
+// Controller (async)
+//    ↓ error occurs
+// asyncHandler
+//    ↓
+// next(error)
+//    ↓
+// Express error middleware
+//    ↓
+// Client gets response
+
+
+
